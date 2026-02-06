@@ -66,7 +66,7 @@ const App = () => {
         <p className="text-center">{ searchTerm == '' ? null : "Looking for \""+searchTerm+"\""}</p> 
         <center className = {`font-google m-7 text-3xl font-medium text-red-600`}>All MOVIES</center>
         <div className="flex justify-center items-center ">
-        {isLoading ? (<Spinner/>): errorMessage ? (<p className="text-red-500">{errorMessage}</p>): (<ul className="grid grid-cols-4" >
+        {isLoading ? (<Spinner/>): errorMessage ? (<p className="text-red-500">{errorMessage}</p>): (<ul className="grid grid-cols-1" >
           {movieList.map((movie) => (<MovieCard key={movie.id} movie = {movie}/>))}
         
         </ul>
