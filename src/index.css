@@ -1,2 +1,15 @@
+
 @import "tailwindcss";
 
+@theme {
+  --font-google: "Google Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  .font-google {
+    font-family: var(--font-google);
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-variation-settings: "GRAD" 0;
+  }
+}

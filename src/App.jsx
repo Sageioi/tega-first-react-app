@@ -59,15 +59,20 @@ const App = () => {
     <div>
       <div className="wrapper">
        <div className="box-border text-white bg-cover ">
-        <header className="text-center text-[100px] ">
+        <header className="text-center text-[50px] m-3">
           <h1 >Find <span className="text-red-500 ">Movies</span> You'll Enjoy Without The Hassle</h1> 
         </header>
         <Search searchTerm = {searchTerm} setSearchTerm={setSearchTerm}/>
         <p className="text-center">{ searchTerm == '' ? null : "Looking for \""+searchTerm+"\""}</p> 
-        <h1>All MOVIES</h1>
-        {isLoading ? (<Spinner/>): errorMessage ? (<p className="text-red-500">{errorMessage}</p>): (<ul className="grid grid-cols-3 ">
+        <center className = {`font-google m-7 text-3xl font-medium text-red-600`}>All MOVIES</center>
+        <div className="flex justify-center items-center ">
+        {isLoading ? (<Spinner/>): errorMessage ? (<p className="text-red-500">{errorMessage}</p>): (<ul className="grid grid-cols-4" >
           {movieList.map((movie) => (<MovieCard key={movie.id} movie = {movie}/>))}
-        </ul>)}
+        
+        </ul>
+        )
+       }
+        </div>
        </div>
       </div>
       </div>
