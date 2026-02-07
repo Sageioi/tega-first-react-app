@@ -68,7 +68,6 @@ const App = () => {
         <div className="flex justify-center items-center ">
         {isLoading ? (<Spinner/>): errorMessage ? (<p className="text-red-500">{errorMessage}</p>): (<ul className="grid grid-cols-1" >
           {movieList.map((movie) => (<MovieCard key={movie.id} movie = {movie}/>))}
-        
         </ul>
         )
        }
